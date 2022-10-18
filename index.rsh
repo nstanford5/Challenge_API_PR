@@ -29,7 +29,7 @@ export const main = Reach.App(() => {
 
   const pSet = new Set();
   const [count] = parallelReduce([0])
-    .invariant(balance() == count * amount)
+    .invariant(balance() == count * amount && pSet.Map.size() == count)
     .while(count < 4)
     .api_(B.checkin, () => {// API.functionName, takes zero arguments
       // CHECK_EXPR -- assumptions about your function
