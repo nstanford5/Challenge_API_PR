@@ -38,7 +38,7 @@ export const main = Reach.App(() => {
       return[amount, (ret) => {// amount = PAY_EXPR; name return function ret
         pSet.insert(this);// add this Address to the set
         A.interact.showUser(this, amount);// log to the front end
-        ret(null);// return null to the caller, must match line 40 and function signature
+        ret(null);// return null to the caller, must match line 38 and function signature
         return[count + 1];// update loop variable
       }];
     })
